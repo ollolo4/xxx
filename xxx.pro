@@ -11,8 +11,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    md5.cpp \
+    dop.cpp \
+    hashes.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    md5.h
 
 FORMS    += mainwindow.ui

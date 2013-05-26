@@ -17,6 +17,17 @@ public:
     
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void display();
+    void openInput();
+    void clickedMD5();
 };
+
+void MD5 (const QString, unsigned char*);
+
+QString FileToQString(QString);
+char * QStringToCharStr(QString);
+QString getStringFromUnsignedChar(unsigned char*);
 
 #endif // MAINWINDOW_H
