@@ -51,7 +51,6 @@ void MainWindow::clickedMD5()
     MD5( ui->openF->text(), str );
 
     ui->textOut->setText( getStringFromUnsignedChar( str ) );
-
 }
 
 void MainWindow::clickedSha()
