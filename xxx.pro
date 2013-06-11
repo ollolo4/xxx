@@ -15,10 +15,12 @@ SOURCES += main.cpp\
     md5.cpp \
     dop.cpp \
     hashes.cpp \
-    sha.cpp
+    sha.cpp \
+    pipemd.cpp
 
 HEADERS  += mainwindow.h \
     md5.h \
-    sha.h
+    sha.h \
+    ripemd.h
 
 FORMS    += mainwindow.ui
