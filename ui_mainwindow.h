@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sun 26. May 10:59:52 2013
+** Created: Mon 10. Jun 15:35:24 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -38,7 +38,6 @@ public:
     QTextBrowser *textOut;
     QPushButton *pushSha;
     QPushButton *pushRipmd;
-    QPushButton *pushGost;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -89,19 +88,16 @@ public:
         label1->setFont(font1);
         pushMd5 = new QPushButton(centralWidget);
         pushMd5->setObjectName(QString::fromUtf8("pushMd5"));
-        pushMd5->setGeometry(QRect(40, 100, 131, 31));
+        pushMd5->setGeometry(QRect(40, 100, 171, 31));
         textOut = new QTextBrowser(centralWidget);
         textOut->setObjectName(QString::fromUtf8("textOut"));
         textOut->setGeometry(QRect(90, 170, 501, 141));
         pushSha = new QPushButton(centralWidget);
         pushSha->setObjectName(QString::fromUtf8("pushSha"));
-        pushSha->setGeometry(QRect(190, 100, 131, 31));
+        pushSha->setGeometry(QRect(250, 100, 171, 31));
         pushRipmd = new QPushButton(centralWidget);
         pushRipmd->setObjectName(QString::fromUtf8("pushRipmd"));
-        pushRipmd->setGeometry(QRect(360, 100, 131, 31));
-        pushGost = new QPushButton(centralWidget);
-        pushGost->setObjectName(QString::fromUtf8("pushGost"));
-        pushGost->setGeometry(QRect(510, 100, 131, 31));
+        pushRipmd->setGeometry(QRect(460, 100, 171, 31));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -127,7 +123,6 @@ public:
         pushMd5->setText(QApplication::translate("MainWindow", "MD-5", 0, QApplication::UnicodeUTF8));
         pushSha->setText(QApplication::translate("MainWindow", "SHA-1", 0, QApplication::UnicodeUTF8));
         pushRipmd->setText(QApplication::translate("MainWindow", "RIPMD", 0, QApplication::UnicodeUTF8));
-        pushGost->setText(QApplication::translate("MainWindow", "\320\223\320\236\320\241\320\242", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

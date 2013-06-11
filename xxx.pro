@@ -14,9 +14,11 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     md5.cpp \
     dop.cpp \
-    hashes.cpp
+    hashes.cpp \
+    sha.cpp
 
 HEADERS  += mainwindow.h \
-    md5.h
+    md5.h \
+    sha.h
 
 FORMS    += mainwindow.ui

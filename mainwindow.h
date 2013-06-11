@@ -22,9 +22,11 @@ private slots:
     void display();
     void openInput();
     void clickedMD5();
+    void clickedSha();
 };
 
 void MD5 (const QString, unsigned char*);
+QString Sha1 (const QString);
 
 QString FileToQString(QString);
 char * QStringToCharStr(QString);

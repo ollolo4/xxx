@@ -1,6 +1,9 @@
 #ifndef MD5_H
 #define MD5_H
 
+#include <stdlib.h>
+#include <string.h>
+
 #define MD5_CBLOCK 64
 #define MD5_LBLOCK 16
 #define MD5_BLOCK 16

@@ -1,4 +1,5 @@
 #include "md5.h"
+#include "sha.h"
 #include <QString>
 #include <fstream>
 
@@ -23,4 +24,9 @@ void MD5( const QString filename_i, unsigned char *str )
 
     fclose(in);
 
+}
+
+QString Sha1( const QString filename_i)
+{
+    return sha1(filename_i.toUtf8().data());
 }

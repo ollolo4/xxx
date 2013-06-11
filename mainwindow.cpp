@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     display();
     connect(ui->openFBut, SIGNAL( clicked() ), SLOT( openInput() ));
     connect(ui->pushMd5, SIGNAL( clicked() ), SLOT( clickedMD5() ));
-
+    connect(ui->pushSha, SIGNAL( clicked() ), SLOT( clickedSha() ));
 }
 
 void MainWindow::display()
@@ -26,7 +26,6 @@ void MainWindow::display()
     ui->pushMd5->setVisible( false );
     ui->pushSha->setVisible( false );
     ui->pushRipmd->setVisible( false );
-    ui->pushGost->setVisible( false );
     ui->textOut->setVisible( false );
 
 }
@@ -41,7 +40,6 @@ void MainWindow::openInput()
         ui->pushMd5->setVisible( true );
         ui->pushSha->setVisible( true );
         ui->pushRipmd->setVisible( true );
-        ui->pushGost->setVisible( true );
     }
 }
 
@@ -52,6 +50,17 @@ void MainWindow::clickedMD5()
     MD5( ui->openF->text(), str );
 
     ui->textOut->setText( getStringFromUnsignedChar( str ) );
+
+}
+
+void MainWindow::clickedSha()
+{
+    ui->textOut->setVisible( true );
+    //unsigned char str[16];
+    QString str;
+    str = Sha1( ui->openF->text());
+
+    ui->textOut->setText( str );
 
 }
 
