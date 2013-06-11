@@ -56,7 +56,6 @@ void MainWindow::clickedMD5()
 void MainWindow::clickedSha()
 {
     ui->textOut->setVisible( true );
-    //unsigned char str[16];
     QString str;
     str = Sha1( ui->openF->text());
 

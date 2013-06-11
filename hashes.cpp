@@ -9,20 +9,18 @@ using namespace std;
 
 void MD5( const QString filename_i, unsigned char *str )
 {
-    FILE *in;
-
-    in = fopen( filename_i.toUtf8().constData(), "rb" );
+    QFile file(filename_i.toUtf8().constData());
+    file.open(QIODevice::ReadWrite);
 
     MD5_CTX c;
-    unsigned char i[size_max] = {0};
-
-    unsigned int size = fread(i, 1, size_max, in);
+    unsigned char *i = (unsigned char*)QString(file.read(size_max)).toUtf8().data();
+    unsigned int size = file.size();
 
     MD5_Pre(&c);
     MD5_Do(&c, i, size);
     MD5_Res(str, &c);
 
-    fclose(in);
+    file.close();
 
 }
 
