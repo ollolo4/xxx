@@ -4,7 +4,6 @@
 #include <QFile>
 #include <iostream>
 #include <QtEndian>
-#include <QTemporaryFile>
 
 #define SIZE_OF_BLOCK 64
 
