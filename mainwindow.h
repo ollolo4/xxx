@@ -23,10 +23,12 @@ private slots:
     void openInput();
     void clickedMD5();
     void clickedSha();
+    void clickedRipemd();
 };
 
 void MD5 (const QString, unsigned char*);
 QString Sha1 (const QString);
+QString Ripemd (const QString);
 
 QString FileToQString(QString);
 char * QStringToCharStr(QString);

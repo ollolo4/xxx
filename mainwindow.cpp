@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->openFBut, SIGNAL( clicked() ), SLOT( openInput() ));
     connect(ui->pushMd5, SIGNAL( clicked() ), SLOT( clickedMD5() ));
     connect(ui->pushSha, SIGNAL( clicked() ), SLOT( clickedSha() ));
+    connect(ui->pushRipmd, SIGNAL( clicked() ), SLOT( clickedRipemd() ));
 }
 
 void MainWindow::display()
@@ -58,6 +59,16 @@ void MainWindow::clickedSha()
     ui->textOut->setVisible( true );
     QString str;
     str = Sha1( ui->openF->text());
+
+    ui->textOut->setText( str );
+
+}
+
+void MainWindow::clickedRipemd()
+{
+    ui->textOut->setVisible( true );
+    QString str;
+    str = Ripemd( ui->openF->text());
 
     ui->textOut->setText( str );
 
