@@ -2,6 +2,7 @@
 #include "sha.h"
 #include "ripemd.h"
 #include <QString>
+#include <QDataStream>
 #include <fstream>
 
 using namespace std;
@@ -10,25 +11,21 @@ using namespace std;
 
 void MD5( const QString filename_i, unsigned char *str )
 {
-   // QFile file(filename_i.toUtf8().data());
-   // file.open(QIODevice::ReadOnly);
+    QFile file(filename_i.toUtf8().data());
+    file.open(QIODevice::ReadOnly);
 
     MD5_CTX c;
-   // QString d = QString(file.read(size_max));
     unsigned char i[size_max] = {0};
-  //  memcpy(i, d.toLocal8Bit().data(), size_max);
-  //unsigned int size = d.length();
 
-    FILE *in;
+    QDataStream in(&file);
 
-    in = fopen( filename_i.toUtf8().data(), "rb" );
-    unsigned int size = fread(i, 1, size_max, in);
+    unsigned int size = in.readRawData((char*)i,size_max);
 
     MD5_Pre(&c);
     MD5_Do(&c, i, size);
     MD5_Res(str, &c);
-    fclose(in);
-    //file.close();
+
+    file.close();
 
 }
 
