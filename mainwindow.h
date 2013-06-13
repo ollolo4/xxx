@@ -26,10 +26,9 @@ private slots:
     void clickedRipemd();
 };
 
-void MD5 (const QString, unsigned char*);
+QString MD5 (const QString);
 QString Sha1 (const QString);
 QString Ripemd (const QString);
 char * QStringToCharStr(QString);
-QString getStringFromUnsignedChar(unsigned char*);
 
 #endif // MAINWINDOW_H

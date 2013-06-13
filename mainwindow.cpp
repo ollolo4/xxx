@@ -47,10 +47,10 @@ void MainWindow::openInput()
 void MainWindow::clickedMD5()
 {
     ui->textOut->setVisible( true );
-    unsigned char str[16];
-    MD5( ui->openF->text(), str );
+    QString str;
+    str = MD5( ui->openF->text());
 
-    ui->textOut->setText( getStringFromUnsignedChar( str ) );
+    ui->textOut->setText( str );
 }
 
 void MainWindow::clickedSha()
